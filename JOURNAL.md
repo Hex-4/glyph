@@ -48,7 +48,7 @@ Tomorrow (which is friday :yay:) I'll add the RGB and start on the PCB design - 
 
 ## [ MAY 31 // GLOW ]
 
-_note: I forgot to save while writing this so I'm rewriting this entry from memory on Jun 2_
+_[note: I forgot to save while writing this so I'm rewriting this entry from memory on Jun 2]_
 
 Hai :3! Today I'll add the RGB and start on the case design. I started researching different NeoPixel-style LEDs - I wanted something small but still reasonably hand-solderable. Instead of doing perkey RGB, which takes a lot of resources and a lot of soldering, I'm going to do something like an "underglow" with 6 RGB LEDs on each side. However, the Adafruit docs say you need a 0.1uF capacitor for each neopixel, which was pretty annoying for the Hexapad. But the docs also say in some cases you can do 1 cap to 2 LEDs, knocking it down to 3 caps per side, which I'm comfortable with. I googled around ([these ones](https://www.adafruit.com/product/2758) were pretty common but looked hard to solder), and eventually found [these](https://www.adafruit.com/product/4960) NeoPixels with nice, long legs that should be good for hand-soldering. Turns out these are actually the reverse-mount LEDs people were using for their hackpads! After debugging a weird KiCad crash (and it magically working again 🙄) I imported the ScottoKeebs library and had a slight struggle wiring up the neopixels with 1 cap per pair. Some digging made why the cap was needed "click" and I found that I was doing it all wrong. Here's the final, corrected wiring I ended up with:
 
@@ -57,6 +57,39 @@ Hai :3! Today I'll add the RGB and start on the case design. I started researchi
 To finish off today I assigned all the footprints (using hotswaps for the switches) and moved to the PCB editor.
 
 ![image](https://github.com/user-attachments/assets/0a349d16-92f6-4973-8ba7-0d8c728a92b8)
+
+**[hours worked this session: 1]**
+
+**[total: 4]**
+
+## [ JUN 4 // ARRANGEMENTS ]
+
+_[ done in the Highway Roadtrip call! ]_
+
+I was just about to start laying out the PCB, when I realized... the PCB needs a way to talk to the other half of the keyboard. After some googling around I came across a Reddit thread suggesting UART, which doesn't need pullup resistors. Nice! This also fits perfectly with a TRRS jack (power, tx, rx, and gnd), so I used the ScottoKeebs TRRS symbol.
+
+![image](https://github.com/user-attachments/assets/fbc98ec0-6ab6-4993-9a33-705b93becb5e)
+
+I put it in to the Kicad PCB editor and struggled to setup the grid properly so I could lay out the keyswitches. After (eventually) fixing the snapping settings to make it work I started laying down the switches:
+
+![image](https://github.com/user-attachments/assets/4386d854-1c2b-44bf-94e6-5f3575548d47)
+
+
+... and promptly realized I wasn't doing them in the correct order. Quickly fixing them (it was actually quite relaxing), here it is:
+![image](https://github.com/user-attachments/assets/60ebe14c-8a90-415d-9319-d805d605a58c)
+
+I then added the diodes (KiCad crashed while doing this! Scary! But luckily it autosaved my work and I didn't lose much), and arranged the other parts. The RGB is in three corners and I found a lovely spot for the Pico and TRRS jack.
+
+![image](https://github.com/user-attachments/assets/cd76b518-9355-4777-a5f6-0ea955392d28)
+
+That's all for today! Tomorrow I'll route the whole thing (!!), print it out to test for fit, and get to work on the right side.
+
+
+**[hours worked this session: 1.5]**
+
+**[total: 5.5]**
+
+
 
 
 
