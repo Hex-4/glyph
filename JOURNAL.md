@@ -89,10 +89,35 @@ That's all for today! Tomorrow I'll route the whole thing (!!), print it out to 
 
 **[total: 5.5]**
 
+## [ JUN 9 // ROUTING ]
 
+Hello!
 
+I booted up Kicad and started getting ready for routing. First, I noticed that the hotswap sockets... were on the back of the PCB? That didn't look right. But after some googling I found that these actually _were_ supposed to go on the back of the board. As well during my research, I found that millmax 0305s were a pretty popular hotswap option, but ended up deciding against them because it would mean a lot more soldering. Flipping all the components to the sides they were supposed to be on, I assigned 3D models to some of the parts:
 
+![image](https://github.com/user-attachments/assets/fcf09a51-1cdb-4a97-b598-17eb52382bb5)
 
+On to routing! This time for Glyph I'm going to manually route everything because when I used an autorouter for the Hexapad it produced some... interesting results. Some searching around on Reddit produced [this thread](https://www.reddit.com/r/MechanicalKeyboards/comments/fxupwp/need_help_with_pcb_design/) which suggested some track widths I'm comfortable with. I'm also going to try a ground pour with Glyph, which should make routing a little less painful.
 
+I also edited some footprints to make them easier to solder:
+![image](https://github.com/user-attachments/assets/fc846092-306c-4b48-bada-08bbe5d6c4bb)
 
+When I started routing I realized I still needed to print out the PCB to check for fit. But my printer was out of ink, so I did what any normal person would do, and taped a piece of paper to my screen and traced out all the keys.
+
+After painstakingly replicating my layout, I checked it against my hand and it was pretty comfy! So I switched back to routing.
+
+There isn't really much to say about this other than that it was very relaxing.
+
+![image](https://github.com/user-attachments/assets/b69d1f64-893e-480a-993c-9aec1bce5a2b)
+
+Chonky 3v3 lines for the LEDs:
+![image](https://github.com/user-attachments/assets/6c9b8912-edc8-4920-a9cd-2e32e22de975)
+
+With only a few routes left, I ran DRC and got this strange hole clearance error. The ScottoKeebs footprint put a NPTH REALLY close to the pin hole. Weird. I spent a lot of time trying a lot of different things and ended up removing the board-wide clearance for copper-to-hole. The netclass still has a 0.2mm clearance and this allows the footprint's clearance override (which I'm assuming is to fix this problem) to take effect.
+
+There were a few more DRC track clearance errors, so I fixed those up. Some clearance-fixing and routing later, Glyph[Left] v0 is done! Apart from the PCB art and outline, of course.
+
+**[hours worked this session: 2]**
+
+**[total: 7.5]**
 
