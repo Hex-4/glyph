@@ -121,3 +121,44 @@ There were a few more DRC track clearance errors, so I fixed those up. Some clea
 
 **[total: 7.5]**
 
+## [ JUN 14 // REPLICATION ]
+
+Today I'm going to finish both sides of the PCB! This includes the PCB art, and then completely duplicating and flipping the design.
+
+I started up Figma and did some light finagling to get to this:
+![image](https://github.com/user-attachments/assets/1a642241-3d32-46e4-9e7c-2482bd0f924e)
+
+On the PCB:
+
+![image](https://github.com/user-attachments/assets/29cfb4ac-02ac-4980-a31d-ff5f875d0a4a)
+
+I then duplicated the left folder and renamed everything, and started rearranging the right side PCB to match my sketch. During a quick break, it occured to me that I should make sure that my keyboard switches match a 1u grid. I know I tried to do this back when I was laying them out, but KiCad grids are hard.
+
+Checking each switch with the Ruler tool, I noticed one particular one that was a teensy bit off. I spent WAY too long fiddling with KiCad's snapping settings trying to get this to move, but eventually I lined it back up again.
+
+![image](https://github.com/user-attachments/assets/5d2fc1a4-8c20-4f5f-afa7-7fa665ae75df)
+
+Turns out this was a VERY good idea! A lot of other switches were off by a little bit. I also made the thumb switch match the grid. I duplicated the left project once again, and started my rearrangement. 
+![image](https://github.com/user-attachments/assets/2bc90569-8d0e-4d28-ad8e-fdbbe38fdcd5)
+
+Now, to reroute the whole right side. Luckily I had a pretty good idea of what to do here (what order, trace widths, etc) so it went quicker than last time.
+
+I used a LOT of vias, but after a bunch of routing, I got to 0 DRC errors. Amazing!
+
+Updating the silkscreen art, here's the full right side:
+
+![image](https://github.com/user-attachments/assets/b71dd5f9-0208-4481-a270-c39127b31893)
+
+That concludes the PCB section of this journal! Now onto the case. I use OnShape for CAD, so I started a new project (with tabs for the left and right sides). I then hopped into Keyboard Layout Editor to try and replicate my design. Here it is for the left side :3
+
+![image](https://github.com/user-attachments/assets/88f9a788-7897-4054-b1f6-b03bdb039744)
+
+That's all for today! Glyph is getting closer to fruition. All that's left is the case and firmware. See you then!
+
+**[hours worked this session: 2.5]**
+
+**[total: 10]**
+
+
+
+
