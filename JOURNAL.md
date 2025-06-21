@@ -159,6 +159,31 @@ That's all for today! Glyph is getting closer to fruition. All that's left is th
 
 **[total: 10]**
 
+## [ JUN 20 // MICRO ]
+
+Hey again! Today i'm going to try to finish both cases. Then I'll be ready for firmware tomorrow and submission the day after. 
+
+To start this session off, I exported the left-side PCB and tried to put it into OnShape. The file was really complex and slowed down the website a lot, so I had to re-export in KiCad with some settings disabled. A lot of settings-tweaking later, I ended up compositing the PCB model in its own tab and deriving that in my main tab.
+
+![image](https://github.com/user-attachments/assets/d4f484ba-3fba-4d10-acf0-ef3a9e62bf35)
+
+I got a plate from the ai03 plate generator and dropped it into an Assembly with the PCB. Checking for fit, I noticed that I had messed up some of the switch positions in KLE! I edited that, reimported, and got here: ![image](https://github.com/user-attachments/assets/9ef30ea6-457b-463e-a93c-c5d8ff4ac3eb)
+
+In the cross-section view you can see that there's no spot for the joystick, which isn't good! Like the Hexapad, I'm doing a sandwich mount minus the top frame, which means I need to make a hole for the joystick. I quickly added that and spent a while fighting OnShape about which point to move after editing a dimension, I managed to make the plate a little smaller:
+
+![image](https://github.com/user-attachments/assets/1eb81983-3a64-4a7a-9343-96d425418442)
+
+Some more dimensioning and cutting brought me to this. I also made the cutout for the joystick a hexagon, which I think looks really cool. I'll probably have that hexagon extend into the full case. However, I have to think about how I'm going to fit everything else - namely the Pico, RGB and TRRS jack, into the case.
+
+![image](https://github.com/user-attachments/assets/172db701-fc59-497d-bc91-0fd94df11d00)
+
+Alright, so due to a lot of interruptions I didn't have much time today, but I think I'll be able to finish the case tomorrow, firmware on Sunday, and submit on Monday. Let's see how that goes. You can find my OnShape design [here](https://cad.onshape.com/documents/a309a43e7ab9d98fd3e56af4/w/ec765f4ff1bc21db4a251eb8/e/584204243a6751a6ad9ca171?renderMode=0&uiState=68562695e7134e26808a7204), I'll add it to the readme later.
+
+**[hours worked this session: 0.5]**
+
+**[total: 10.5]**
+
+
 
 
 
