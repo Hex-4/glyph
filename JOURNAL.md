@@ -184,6 +184,27 @@ Alright, so due to a lot of interruptions I didn't have much time today, but I t
 **[total: 10.5]**
 
 
+## [ JUN 21 // MODEL]
+
+I was thinking about Glyph last night, and remembered that I needed to change the power circuitry for the right side. Right now power goes to VBUS, which can work but will explode if ever connected to USB. Not good! I booted up kicad once more to update that schematic and PCB. Luckily this was a fairly easy change since the VBUS and VSYS pins are right next to each other on the Pico. I then switched back to OnShape to continue on the case. Extending the hexagon shape and outlining the case, I started to build up the other parts and sides:
+
+![image](https://github.com/user-attachments/assets/db7761dd-faac-443a-a23c-63dbf8ca480a)
+
+When making the walls, I needed to check how tall they should be to fit the Pico. For some reason KiCad didn't include a 3D model of the Pi Pico, so I set out to find one on GrabCAD, and got [this one](https://grabcad.com/library/raspberry-pi-pico-w-pins-1). I had to sign up for an account to download (why the hack do you need my phone number????), but eventually got it into my main assembly in OnShape. Some light translation got me here:
+
+![image](https://github.com/user-attachments/assets/d0e305cc-75e7-431c-ac44-764d42179067)
+
+I then quickly added the bottom of the case, and then set my sights on the USB hole and TRRS hole. Sadly, the TRRS hole will have to go through the hexagon cutout (which looks ugly) because the jack is too tall. My CAD software produced some... unique results:
+
+![image](https://github.com/user-attachments/assets/1ae38c97-780d-4555-a60f-48d78b8dcb99)
+
+To finish up today, I cleaned up the case a little and made the bottom side smaller so the hexagon pattern could stick out more.
+
+That's all! I didn't get as much as I wanted to done, but I *think* I'll be able to get the case and basic firmware done on Sunday.
+
+**[hours worked this session: 1.5*]*
+
+**[total: 12]**
 
 
 
