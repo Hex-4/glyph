@@ -184,7 +184,7 @@ Alright, so due to a lot of interruptions I didn't have much time today, but I t
 **[total: 10.5]**
 
 
-## [ JUN 21 // MODEL]
+## [ JUN 21 // MODEL ]
 
 I was thinking about Glyph last night, and remembered that I needed to change the power circuitry for the right side. Right now power goes to VBUS, which can work but will explode if ever connected to USB. Not good! I booted up kicad once more to update that schematic and PCB. Luckily this was a fairly easy change since the VBUS and VSYS pins are right next to each other on the Pico. I then switched back to OnShape to continue on the case. Extending the hexagon shape and outlining the case, I started to build up the other parts and sides:
 
@@ -202,9 +202,65 @@ To finish up today, I cleaned up the case a little and made the bottom side smal
 
 That's all! I didn't get as much as I wanted to done, but I *think* I'll be able to get the case and basic firmware done on Sunday.
 
-**[hours worked this session: 1.5*]*
+**[hours worked this session: 1.5]**
 
 **[total: 12]**
+
+## [ JUN 22 // ALMOST ]
+
+Screw holes!
+
+I was missing screw holes in my case. But before I fixed that, I tweaked some dimensions in the sketch to make the hexagon more prounounced. I then turned to the screw holes. I already have some M4 nuts and bolts from the Hexapad, so I tried to find their specs. The hole itself was quite easy - M4 means 4mm. But I had to do a lot more digging to find the specs for my nut, and ended up on [this ISO specs page](https://www.engineersedge.com/hardware/standard_metric_hex_nuts_13728.htm)
+![image](https://github.com/user-attachments/assets/2f932869-a7ce-42d3-96e8-f9e70826113e)
+
+Holding the nuts up to a ruler (because i don't have callipers :noo:), it looked like they were 3mm tall and 7mm from flat-to-flat, which matches up with the min/maxes on the table. I fought OnShape to expand the walls (it's probably just my terrible sketching skills) and sketch the holes:
+
+![image](https://github.com/user-attachments/assets/0b801dda-6234-439d-ae29-df96812431ff)
+
+I also split the case into two and connected them together with OnShape's very nice mate system. Next up is the USB hole. I did this the same way I did for the Hexapad - creating a new sketch with a rectangle, and using a remove extrude to cut out a hole. It felt quite refreshing to work in a sketch that wasn't the absolute mess of my plate!
+
+![image](https://github.com/user-attachments/assets/9780194d-43d2-4296-90ec-3b85758a614a)
+
+Originally I was going do to something similar to the Hexapad, with outset text on top:
+![image](https://github.com/user-attachments/assets/2190a8a7-7c40-44a7-acc1-78b49d3380ae)
+
+But I think this time I'll put the text on the sides. It looks way cooler and sleeker:
+
+![image](https://github.com/user-attachments/assets/e22d9e20-ae09-4b40-87cb-0e4bcc0589ed)
+
+While I was doing this I had to figure out how to flip a sketch (I was drawing on the left side and my plane was the right plane.), and learnt that sketches could use mate connectors as planes. I flipped a mateconnector until the sketch was correctly oriented, and ended up with this really nice effect!
+
+Now onto filleting. While filleting the top plate I misclicked and selected a face instead of an edge, producing a "pillowy" effect I'm quite fond of. However, when I tried to apply this to the entire thing, I ran into a fillet error on one of the sides. This side, for whatever reason during my terrible sketching, was two faces split by an edge. Some research led me to the "delete face" tool, which worked perfectly and allowed me to finish this really neat touch:
+
+![image](https://github.com/user-attachments/assets/56ccead8-42f8-41a2-8362-ca2ac5691177)
+
+I then filleted out everything else, and the left-side case is done!
+
+![image](https://github.com/user-attachments/assets/552d3e6a-8c22-45f1-96d0-72c55c6efd26)
+
+Onto the right case. I wanted to see if I could be lazy and just flip my left design and tweak a few positions, so I imported the right PCB and duplicated my Part Studio, deleting everything except the sketch and mirroring it. If this flip works, and there are no major changes that need to be made, it would save me hours.
+
+It frickin' worked.
+
+I re-extruded and tweaked some sizes to fit the slightly different part locations on the new PCB, then tried to add more clearance for the top and right sides, which the board was clipping into. The top side worked easily but I had to (yet again) fight my CAD software to let me re-dimension the right side. It was very annoying but I did learn about driven (like a ruler) and driving (forces the sketch to change) dimensions. No need for a USB port on this side, so I skipped to the text inset:
+
+![image](https://github.com/user-attachments/assets/aee28c9c-c982-4158-9032-d97239cee12e)
+
+To finish up the case, I filleted everything up:
+
+![image](https://github.com/user-attachments/assets/dfc7e81b-9b31-403f-b535-e836526512d0)
+
+And that's it for the Glyph case!
+
+This was a huge entry, but Glyph is almost done. I can see the light at the end of the tunnel.
+
+Firmware's up next.
+
+
+**[hours worked this session: 3]**
+
+**[total: 15]**
+
 
 
 
