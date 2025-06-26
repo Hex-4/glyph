@@ -261,6 +261,29 @@ Firmware's up next.
 
 **[total: 15]**
 
+## [ JUN 25 // FINALITY (?) ]
+
+School's out!
+
+I'm hoping to submit today. Flights to Undercity are getting expensive and review takes 3-4 days, so I need to lock in. Before the firmware, though, I needed a basic layout. After cleaning my hideous (🫣) desk, I opened my notebook back up and tweaked the layout from the first entry.
+
+Now onto which firmware to use. Joysticks aren't very common on keyboards so I need something that's either really extensible or has lots of support. QMK has lots of features but hurts my brain, and ZMK doesn't have wired support. KMK it is then! It has a split keyboard module (w/ UART over TRRS which is great) and I can just write (or copy :3) some circuitpython to get joystick support. I hopped over to their [guide](https://github.com/KMKfw/kmk_firmware/blob/main/docs/en/Getting_Started.md), made two folders for the two halves, and scaffolded each one. I then opened up my schematic to have available as I mapped, and imported the HoldTap module for my space-shift key. Here's the main keymap:
+
+![image](https://github.com/user-attachments/assets/e710345e-b550-43fc-8b7c-f351f1a51038)
+
+Next up is RGB. This was quite easy, I just pasted in the RGB code from the docs and set `rgb.animation_mode = "rainbow"` which is a nice default. Now, I need to figure out how to get my thumb key working. I don't think KMK has support for some switches being directly wired, so I searched their Zulip and found nothing except rewriting the pin-scanning class, which I did not want to do. However, KMK has encoder support, and I have unused pins on my Pico. What if I did an epic hack and pretended an encoder was there, but it actually was just a switch? I added an encoder and I don't see any problems with using HoldTap with it, so I guess this hack would work. Now, all that's left is the joystick and split config, then copying it over to the second half.
+
+I searched around and found this [thumbstick module](https://github.com/Ben0981/kmk_firmware/blob/module_thumbstick/kmk/modules/thumbstick.py), which I downloaded and put into both my folders. I changed the pin definitions to suit me and it was done! Finally for this side's firmware, I imported the Split module and set it up.
+
+I then duplicated the file for the right-side firmware, edited the keymap to match my notebook, and just like that, **[glyph] is - somehow - done!!!**
+
+Tomorrow will be getting everything ready for submission and finding part sources.
+
+See you then!
+
+**[hours worked this session: 2]**
+
+**[total: 17]**
 
 
 
