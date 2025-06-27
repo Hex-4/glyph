@@ -286,4 +286,30 @@ See you then!
 **[total: 17]**
 
 
+## [ JUN 26 // SUBMISSION ]
 
+I'm just going to be going down the Highway checklist for this one:
+
+![image](https://github.com/user-attachments/assets/d4a0c126-4d52-4ad4-b013-f46933d594bd)
+
+First, a BOM in CSV form. I have some various bits and bobs to use with this project, so I don't need to find too many parts on DigiKey.
+
+I found an online CSV editor and opened up KiCad to count out every part I needed. I already have some MX switches, so I filled that row out as $0 and skipped to the hotswap sockets. DigiKey has these in 10 and 20 packs, which also happen to have around the same unit price, so I went for two 20 packs to give me 40 sockets for 38 switches. Now onto the TRRS jack. I couldn't find a PJ-320A on DigiKey, so I went to AliExpress and found a good option. I then realized - why wasn't I using AliExpress in the first place? I found diodes and hotswap sockets on there. This saved me a ton because I used Choice products, meaning free (albeit slow) shipping. That's all for the components! I then exported my PCB files to see how expensive they would be at JLCPCB. After switching to chromium because signup wasn't working I got to the slightly concerning total of CAD$40.
+
+![image](https://github.com/user-attachments/assets/9acf049d-1c07-4c07-8aae-82432890820a)
+
+Onto a few other misc things, namely the nuts and bolts (already have from the Hexapad) and a keycap set. I found a nice cute MOA profile one on AliExpress, which was good because I didn't have to worry about row heights and it included a few keycaps without legends for my nonstandard layout.
+
+I then calculated tax and all that good stuff (plus a ~$9 buffer) to get to the nice, round total of CAD$100!
+
+Then onto the other things on the list. I cleaned up the repo a little and added READMEs to each folder. I also exported all the STL files for 3D printing.
+
+Onto the main README. I wrote a little about my project and why I built it, and used KiCad's raytracing mode to generate some nice PCB renders. I double checked everything once again and [ glyph ] was ready for submission!
+
+The parts will take a while to arrive, but I'll see you when I start solderng.
+
+baiiii~
+
+**[hours worked this session: 1.5]**
+
+**[total: 18.5]**
