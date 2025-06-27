@@ -1,0 +1,9 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+A1,RaspberryPi_Pico_Common_THT,1,RaspberryPi_Pico_W,
+"C1, C2, C3",C_Disc_D3.0mm_W1.6mm_P2.50mm,3,0.1uF,
+"D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D2, D3, D4, D5, D6, D7, D8, D9",D_DO-35_SOD27_P7.62mm_Horizontal-bigpads,18,D_45deg,
+"D19, D20, D21, D22, D23, D24",LED_SK6812MINI,6,LED_SK6812MINI,C5149201
+"SW1, SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW17, SW18, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9",Hotswap_MX_Plated,18,SW_Push_45deg,
+SW19,Hotswap_MX_Plated,1,SW_Push,
+U1,XDCR_COM-09032,1,COM-09032,
+U2,TRRS_PJ-320A,1,TRRS,

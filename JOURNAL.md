@@ -5,6 +5,8 @@ description: "[ a custom split keyboard for portably and comfortably interfacing
 created_at: "2025-05-23"
 ---
 
+*[hours spent so far: 18.5]*
+
 # [ JOURNAL_ ]
 
 ## [ MAY 27: IDEA ]
