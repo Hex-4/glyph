@@ -315,3 +315,24 @@ baiiii~
 **[hours worked this session: 1.5]**
 
 **[total: 18.5]**
+
+## [ JUN 29 // ZINE ]
+
+_(partially written on jun 30 because I needed sleep - shocking I know)_
+
+I lied! Today I'm going to be cleaning up the renders so I can make a nice magazine page, since the deadline is uh... today. First, I tried looking around for a keycap model so that my CAD renders weren't so ugly. MOA profile keycap models were nonexistent, so I searched for the next best thing - XDA keycaps. Printables by Prusa by Josef Prusa, being the absolute legends that they are, let me download [this nice model](https://www.printables.com/model/397962-blank-xda-profile-keycaps/files) without an account. I popped the file into OnShape, added a mate connector, and then proceeded to place down 38 mate connectors:
+
+![image](https://github.com/user-attachments/assets/fb64b2d4-282b-41a3-a92b-cba6a254ca74)
+
+And then fastened each keycap:
+
+![image](https://github.com/user-attachments/assets/1e1e0d3c-d8dc-48cf-bcb0-9c9e9ff17edf)
+
+Now to get some nice renders. Not wanting to pay for Render Studios or mess around with Blender, I found [this youtube video
+](https://www.youtube.com/watch?v=WZH43feKlcE), which used a website called modelviewer.dev.
+
+I spaced out the left and right sides (so I could get a separate shot of each), then assigned colors to some specific faces so I could make the look different in modelviewer. I then exported a.. uhh... 1.2GB file. Yeah, this is NOT going to work. I googled around and found [this](https://forum.onshape.com/discussion/18394/new-custom-feature-simplify) Simplify FeatureScript for OnShape, which should remove a lot of the switch internals that I don't need.
+
+It didn't work, and I had 30 minutes left to submit.
+
+I ended up manually selecting all the switch internals and things I didn't need and deleted them.
