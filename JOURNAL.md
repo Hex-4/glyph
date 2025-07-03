@@ -5,7 +5,7 @@ description: "[ a custom split keyboard for portably and comfortably interfacing
 created_at: "2025-05-23"
 ---
 
-*[hours spent so far: 18.5]*
+*[hours spent so far: 19.5]*
 
 # [ JOURNAL_ ]
 
@@ -318,7 +318,7 @@ baiiii~
 
 ## [ JUN 29 // ZINE ]
 
-_(partially written on jun 30 because I needed sleep - shocking I know)_
+_(second half written on jul 02 because I needed sleep - shocking I know)_
 
 I lied! Today I'm going to be cleaning up the renders so I can make a nice magazine page, since the deadline is uh... today. First, I tried looking around for a keycap model so that my CAD renders weren't so ugly. MOA profile keycap models were nonexistent, so I searched for the next best thing - XDA keycaps. Printables by Prusa by Josef Prusa, being the absolute legends that they are, let me download [this nice model](https://www.printables.com/model/397962-blank-xda-profile-keycaps/files) without an account. I popped the file into OnShape, added a mate connector, and then proceeded to place down 38 mate connectors:
 
@@ -336,3 +336,13 @@ I spaced out the left and right sides (so I could get a separate shot of each), 
 It didn't work, and I had 30 minutes left to submit.
 
 I ended up manually selecting all the switch internals and things I didn't need and deleted them.
+
+A speedy export and a background removal later, I popped my low-res model into Figma and started playing around with ideas. My original idea was to do a terminal-like thing with text prompts showing images and info, but that looked bad, so I went for this "slanted" two-part design:
+
+![image](https://github.com/user-attachments/assets/41af2cb3-3576-4a30-a607-cf6c265f355f)
+
+I also added fun little arrows pointing out the unique parts and icons for all of the features. A qr code, some text outlines, and other tweaks finished the design, and I submitted it ~~45 minutes after the deadline.~~
+
+**[hours worked this session: 1]**
+
+**[total: 19.5]**
