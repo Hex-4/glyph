@@ -346,3 +346,23 @@ I also added fun little arrows pointing out the unique parts and icons for all o
 **[hours worked this session: 1]**
 
 **[total: 19.5]**
+
+## [ JUL 24 // SOLDER ]
+
+Everything's here! Today I'll solder everything together and mak sure it works. I started with the SMD components. Thanks to the SMD soldering workshop at Undercity, I wasn't going into this completely blind. However, I didn't have a hotplate, so I had to use my dad's comically oversized heat gun. I did a quick test run and everything seemed to work apart from the minor problem of the components blowing off when heated from the side. With that, I applied all the paste, placed all the hotswap sockets and LEDs, and heated everything up.
+
+![image](https://hc-cdn.hel1.your-objectstorage.com/s/v3/2f6dad3b2babf936c63330fd4a2c5c566c0fa90a_1000003085.jpg)
+
+![image](https://hc-cdn.hel1.your-objectstorage.com/s/v3/09071febfd43b2551898d3fc00d18d92b7fa6fe6_1000003082.jpg)
+
+What I found really neat was how everything was magically sucked into place - even the messily pasted, half-bridged LEDs neatened themselves up. Onto the THT components!
+
+I got everything ready and moved outside. This would hopefully go much smoother than the Hexapad with my new filament and actual flux. It did! Flux made the whole process 10x easier and quicker, and before I knew it, I was done with the diodes and joystick.
+
+Now onto the Pico. I don't have to solder all the pins because I have some unused ones, so that cut the pad count down from 40 to 24. I had to fix a few bridges but it turned out well!
+
+I soldered everything else on and plugged it in. It worked! Kinda. The RGB doesn't show and the bottom row doesn't work, but I'll figure that out tomorrow.
+
+![image](https://hc-cdn.hel1.your-objectstorage.com/s/v3/0eb04ca337c5d8b6b65666a1f349f912dcf547da_1000003098.jpg)
+
+![IMAGE](https://hc-cdn.hel1.your-objectstorage.com/s/v3/9fb168192a710403401d4160364be0e94855254d_1000003097.jpg)
