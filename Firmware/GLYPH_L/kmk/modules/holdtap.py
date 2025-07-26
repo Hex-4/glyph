@@ -137,6 +137,7 @@ class HoldTap(Module):
 
     def ht_pressed(self, key, keyboard, *args, **kwargs):
         '''Unless in repeat mode, do nothing yet, action resolves when key is released, timer expires or other key is pressed.'''
+        print("HOLDTAP PRESSED")
         if key in self.key_states:
             state = self.key_states[key]
             keyboard.cancel_timeout(self.key_states[key].timeout_key)

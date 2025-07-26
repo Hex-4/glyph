@@ -144,6 +144,7 @@ class GPIOEncoder(BaseEncoder):
             new_button_state = self.pin_button.get_value()
             if new_button_state != self._button_state:
                 self._button_state = new_button_state
+                print(new_button_state)
                 if self.on_button_do is not None:
                     self.on_button_do(self.get_state())
 
@@ -304,7 +305,11 @@ class EncoderHandler(Module):
         if state['is_pressed'] is True:
             layer_id = keyboard.active_layers[0]
             key = self.map[layer_id][encoder_id][2]
-            keyboard.tap_key(key)
+            keyboard.add_key(key)
+        elif state['is_pressed'] is False:
+            layer_id = keyboard.active_layers[0]
+            key = self.map[layer_id][encoder_id][2]
+            keyboard.remove_key(key)
 
     def before_matrix_scan(self, keyboard):
         '''
