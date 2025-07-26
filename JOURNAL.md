@@ -366,3 +366,29 @@ I soldered everything else on and plugged it in. It worked! Kinda. The RGB doesn
 ![image](https://hc-cdn.hel1.your-objectstorage.com/s/v3/0eb04ca337c5d8b6b65666a1f349f912dcf547da_1000003098.jpg)
 
 ![IMAGE](https://hc-cdn.hel1.your-objectstorage.com/s/v3/9fb168192a710403401d4160364be0e94855254d_1000003097.jpg)
+
+
+**[hours worked this session: 1.5]**
+
+**[total: 21]**
+
+## [ JUL 25 // PROBLEMS ]
+
+It's always a software problem.
+
+This side of the keyboard has a strange issue: the bottom row is unresponsive and the middle row is acting as the bottom row. Even weirder, when I only scan the bottom and middle rows, the bottom row responds. So it can't be a hardware problem. I spent a bunch of time trying to figure out why this was happening, changing the code, probing with my multimeter, even trying to set up my logic analyzer. I checked the serial console one more time. When I press a key on the bottom row, I get an error about the keymap index being out of range. I disable the split module and it magically works! I think this is because I was testing with only one half.
+
+Now to fix the RGB issues. Thankfully, this was much quicker - I was just missing some initialization code. The last thing I needed to fix was the HoldTap on the thumb button. Because I have the thumb button hooked up as a rotary encoder, I think KMK is pressing AND RELEASING the button when I press it. It looks like KMK is using tap_key() behind the scenes. I changed it to use keyboard.add_key() and added an if branch to remove_key(). This worked like a charm!
+
+<img width="540" height="720" alt="image" src="https://github.com/user-attachments/assets/2bfbd3ee-2c92-41d8-9178-b4fb0a90614c" />
+
+To finish today off I soldered the right side. The Pico was a little trickier this time and I had to fix a few bridges but I did manage to make it work.
+
+<img width="720" height="540" alt="image" src="https://github.com/user-attachments/assets/c3a87eea-ac18-4b95-ab3f-18a98c1b3f70" />
+<img width="720" height="540" alt="image" src="https://github.com/user-attachments/assets/06522a94-baa4-4607-9497-11c3dc77a08e" />
+
+That'll be all! I'm still waiting on my case and my TRRS cabe, but once those arrive I'll be able to test. See you then!
+
+**[hours worked this session: 2]**
+
+**[total: 23]**
