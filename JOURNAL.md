@@ -392,3 +392,16 @@ That'll be all! I'm still waiting on my case and my TRRS cabe, but once those ar
 **[hours worked this session: 2]**
 
 **[total: 23]**
+
+## [ JUL 29 // REALITY ]
+
+Everything is here! Now I'm going to inevitably fix the firmware, then screw everything together. I put my firmware onto the right side Pico, applied some fixes so it could boot, then tried to connect them with the TRRS cable. I had to whittle some of the plastic off of the cable, but eventually made it work and connected the two sides. After re-enabling my split module, I ran into the same problem as last time: KMK was trying to press keys that didn't exist in my keymap. 
+
+In an effort to make debugging easier, I renamed the two drives to GLYPH_L and GLYPH_R, then got searching. It quickly became evident that I was using the split module wrong - the keymap should be exclusively on the host side. This explains all the weird errors with KMK trying to press keys that I hadn't defined. However, I quickly ran into a bigger problem - the right side kept bootlooping. It would show RGB for a split second, mount, then disappear. I tried to fix this by nuking the Pico and reinstalling my firmware, and it worked, kinda, but then my RGB dissappeared. 
+
+And then the right Pico didn't even show up as a hard drive.
+
+
+**[hours worked this session: 1]**
+
+**[total: 24]**
