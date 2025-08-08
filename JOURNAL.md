@@ -401,7 +401,27 @@ In an effort to make debugging easier, I renamed the two drives to GLYPH_L and G
 
 And then the right Pico didn't even show up as a hard drive.
 
-
 **[hours worked this session: 1]**
 
 **[total: 24]**
+
+## [ AUG 7 // OOPS ]
+
+The Pico is fried, I think. The onboard power LED is flickering when it's plugged in. First, I tried desoldering the pico, which went about as well as you would expect: 
+
+<img width="720" height="540" alt="image" src="https://github.com/user-attachments/assets/eedbf08c-b58e-4fd0-969f-3565e441c2d7" />
+
+New plan. I'm going to redo the right side. I have enough parts for a do-over - except for the joystick. But how hard can it be to find a SparkFun joystick? Spoiler: very hard. For some stupid reason someone bought literally every single COM-09032 from every single supplier and I had to find an alternative part.
+
+<img width="978" height="471" alt="image" src="https://github.com/user-attachments/assets/1c4f9889-788e-4970-bed0-b30b3376339f" />
+
+I spent HOURS combing through Amazon, deciphering strange part engravings (wtf does ALPS 33 18 mean????), hunting down datasheets, and cross-referencing schematics against my CAD, trying to figure out where Sparkfun got their joysticks. I found a few amazon listings, but none of them were for sure. I eventually found the [Sparkfun Deluxe Thumbstick](https://www.sparkfun.com/thumb-joystick-deluxe.html), which is expensive but is the only option I found that I could be sure fits my PCB footprint.
+
+Alright! That's it for today. I've placed the DigiKey order and hopefully it arrives tommorow so I can get soldering!
+
+**[hours worked this session: 2]**
+
+**[total: 26]**
+
+
+
