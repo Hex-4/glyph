@@ -423,5 +423,45 @@ Alright! That's it for today. I've placed the DigiKey order and hopefully it arr
 
 **[total: 26]**
 
+## [ AUG 11 // HOPE ] 
 
+SMD soldering time! Again! Today I'm going to be re-soldering the whole right side and hopefully making everything work. But first, I had a suspicion. Could the strange power issues be because of USB and VBUS power fighting? I know I fixed that, but I can't remember if I reexported my Gerbers after I did.
+
+A quick check against KiCanvas and my physical PCB reveals that it should be all good, but just in case I'm going to avoid having the TRRS and USB power at the same time.
+
+Onto soldering! This was really the same as last time, except much easier with practice.
+
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/cbd535e7-acaf-40f1-b579-f9585141f36d" />
+
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/f927e32b-fd3f-4004-82dd-749930167654" />
+
+I had to figure out how to remove a diode because I put it in the wrong way around, but eventually got it to work.
+
+<img width="405" height="720" alt="image" src="https://github.com/user-attachments/assets/85ecef5d-2db1-48de-90bd-739a777e3f84" />
+
+<img width="405" height="720" alt="image" src="https://github.com/user-attachments/assets/6b7b1aa3-29e9-432b-b798-0998ff151672" />
+
+After a mild scare with the Pico not showing up as a drive (turns out i didn't plug in the usb cable ☠️) I flashed circuitpython and uploaded my firmware. RGB was pretty easy to get working - I just applied the same fixes as the left side - but then came the REAL challenge. Split support. I unplugged the right side from USB, plugged in my audio cable, and took a deep breath.
+
+IT WORKED FIRST TRY.
+
+Well, mostly. The custom stuff I have on the right side doesn't work, so I fiddled around a bit changing options, but nothing seemed to work. Reading the docs again, I found this:
+
+<img width="1025" height="64" alt="image" src="https://github.com/user-attachments/assets/f439ced9-63b6-4ccb-9d9c-156628f7510d" />
+
+After reading a lot of Zulip threads and source code, and lots of internal debate, I made the decision to switch to QMK firmware. If I continued with KMK I would have to write my own scanner for the thumbstick and generally do a lot of things myself.
+
+I installed QMK, ran `qmk new-keyboard`, and initialized my keyboard folder. This was actually quite simple, and the info.json was easy to understand. Soon enough, though, I hit my first roadblock: You can't use a matrix and direct pins at the same time. Some googling, though, told me about the DIP Switch feature, which looked like exactly what I needed. I spent a bit configuring everything in my info.json - enabling and setting up the features I need, defining pins, etc etc.
+
+<img width="790" height="799" alt="image" src="https://github.com/user-attachments/assets/e868549d-93ac-47d4-ae38-b47ccff707a8" />
+
+I then started running `qmk compile` to test out my firmware, and I eventually got to a working build. A few tweaks later and it was ready to be flashed onto my devices. I love how QMK actually tells you - explictly - that you'll flash the same firmware onto both boards. Much less confusing than KMK. However, I ran into a problem: only the left side worked. I tried enabling and disabling lots and lots of different flags, and figured out that i had to add `#define SERIAL_USART_PIN_SWAP`. Both sides work now! Next up is making the joystick + thumb button work, and adding my keymap. While testing this, though, I realized that the default Corne keymap was much better than mine in a few ways, so I might be changing up the keycaps a bit.
+
+<img width="405" height="720" alt="image" src="https://github.com/user-attachments/assets/aecd35e7-a93e-47e2-9531-fac734827a85" />
+
+See you soon!
+
+**[hours worked this session: 4]**
+
+**[total: 30]**
 
