@@ -465,3 +465,83 @@ See you soon!
 
 **[total: 30]**
 
+## [ AUG 12 // QUANTUM ]
+
+Good morning! Today I'm going to fix up the firmware and hopefully submit my project demo. First order of business is the DIP switches. In [this github issue](https://github.com/qmk/qmk_firmware/issues/6014) I found some code to add to my keymap.c:
+
+```c
+bool dip_switch_update_user(uint8_t index, bool active) {
+    switch (index) {
+        case 0: {
+            if (active) {
+                tap_code(KC_A);
+            } else {
+                
+            }
+        };
+        case 1: {
+            if (active) {
+                tap_code(KC_B);
+            } else {
+                
+            }
+        }
+    }
+    return true;
+}
+```
+
+However, QMK was complaining about no map being defined. Weird. I tried a lot of little tweaks and syntax changes, and eventually realized it was because I was enabling DIP mapping when I didn't need it. I tested it out... and only the thumb button on the master (left) side worked. I then spent the next half hour combing through the QMK source and scouring the github, only to find that I had been lied to and split support for DIP switches actually doesn't exist. :( I turned to the QMK discord, where some kind souls suggested making a fake row/column for the thumb switches.
+
+<img width="1062" height="541" alt="image" src="https://github.com/user-attachments/assets/2204dd0e-f741-4461-81b0-89444ae6d18c" />
+
+This worked like a charm! Now for the joysticks. QMK, again, doesn't have split joystick support, so I'm going to be doing a lot of DIY stuff with this. Starting with some (ai-generated 💀) code, I applied a few tweaks and got the master-side joystick working nicely. Now I need to make the slave send joystick info to the master. This wasn't too bad - just took some documentation and some looking-up of basic C concepts. I then spent a while being stuck on the RPC methods not getting compiled in, but eventually found the definition I was missing. My code didn't work.
+
+Eventually getting fed up with all this custom code, I decided to just make the joysticks act as pointer devices. QMK has native split support for this and I think it'd be neat to see how I could use that. So I got rid of all my custom code and configured two pointer devices. This was easy enough because the docs were straightforward. However, something strange started happening - the keyboard became completely unresponsive and `qmk console` was tweaking out. This is because I was trying to set a CPI on a joystick, which is not possible. I messed around with some numbers until I arrived at a sensitivity I was happy with. While I was tweaking though, I had an idea.
+
+What if I used the pointer report to tap keycodes? This would give me all the benefits of my previous system while actually working. I had to give it a shot. And with this code:
+
+```c
+report_mouse_t pointing_device_task_combined_user(report_mouse_t left_report, report_mouse_t right_report) {
+
+    left_report.h = left_report.x / 12;
+    left_report.v = left_report.y / 12;
+    left_report.x = 0;
+    left_report.y = 0;
+
+    int x = right_report.x;
+    int y = right_report.y;
+    
+    if (y >= 1 && x == 0) {
+      register_code(KC_W);
+    } else if (y <= -1 && x == 0) {
+      register_code(KC_S);
+    } else if (y == 0 && x >= 1) {
+      register_code(KC_D);
+    } else if (y == 0 && x <= -1) {
+      register_code(KC_A);
+    } else {
+      unregister_code(KC_W);
+      unregister_code(KC_A);
+      unregister_code(KC_S);
+      unregister_code(KC_D);
+    }
+
+
+    right_report.x = 0;
+    right_report.y = 0;
+    
+    
+    return pointing_device_combine_reports(left_report, right_report);
+}
+```
+
+It worked PERFECTLY. YAYYYYYYYY
+
+Final step is the keymap. I'm mkaing the controversial (?) decision to start with an AI-generated keymap and tweak it to my needs as I use Glyph. Claude made a good starting point, and I added some RGB control to the Function layer. I then spent a bit trying to get thumb+thumb goes to a different layer working, trying a few different approaches, then eventually giving up and just putting the numbers on the Symbols layer. I then tried to set up TapDance so that Ctrl is also the Super key.
+
+Alright! That's enough for today! Tomorrow I'll add finishing touches and record all the submission stuff.
+
+**[hours worked this session: 6]**
+
+**[total: 36]**
