@@ -9,6 +9,8 @@ I had made the Hexapad (a macropad) before, but I wanted something to replace my
 
 [{ visit the journal }](JOURNAL.md)
 
+[{ demo video }](https://www.youtube.com/watch?v=N5a5DT0hNs8)
+
 [{ left pcb }](https://kicanvas.org/?github=https://github.com/Hex-4/glyph/tree/main/PCB/left)
 
 [{ right pcb }](https://kicanvas.org/?github=https://github.com/Hex-4/glyph/tree/main/PCB/right)
