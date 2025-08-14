@@ -5,7 +5,7 @@ description: "[ a custom split keyboard for portably and comfortably interfacing
 created_at: "2025-05-23"
 ---
 
-*[hours spent so far: 19.5]*
+*[hours spent so far: 38.5]*
 
 # [ JOURNAL_ ]
 
@@ -545,3 +545,30 @@ Alright! That's enough for today! Tomorrow I'll add finishing touches and record
 **[hours worked this session: 6]**
 
 **[total: 36]**
+
+## [ AUG 13 // DONE ]
+
+Turns out one of my keys was faulty, but I have extra switches so that isn't much of a problem. Glyph is slowly becoming usable! I tweaked the keymap around to make it a little more similar to QWERTY, and then set my sights on fixing the joystick arrow keys. For some reason these were repeating even though I have checks in place to make it... not do that? Some debug statements revealed that the joystick oscillated between (0, 0) and whatever it was ACTUALLY at. I (meaning Claude) spent a while trying to fix this, but I eventually gave up with AI and wrote my own solution, which worked perfectly. Huh.
+
+<img width="929" height="134" alt="image" src="https://github.com/user-attachments/assets/b3a78579-7ffd-416e-97a0-4e2de518b256" />
+
+Be quiet. 
+
+I also enabled the Auto Shift feature because it's cool, and added some keycodes to customize it to my Function layer. I also enabled Caps Word because it seems useful, and made double-tapping ESC trigger CW. I then flashed Glyph for what will hopefully be the last time. Putting everything into its case and switching around the keycaps to match my new layout, I opened up Monkeytype to test out my build. While testing, though, I realized my Control/Super key was very unreliable. Sometimes it worked, sometimes it didn't. Upon further inspection, I noticed that one of the pads of the hotswap socket wasn't fully soldered, so I reflowed it and sure enough, the key started working again. I then needed to learn how to use *[glyph]*, so I did a ton of Monkeytype practice.
+
+<img width="1600" height="401" alt="image" src="https://github.com/user-attachments/assets/c83f6857-83a3-4dd3-aa35-12bba455bbbf" />
+Over time I got better:
+
+<img width="1344" height="413" alt="image" src="https://github.com/user-attachments/assets/fb471268-f4d4-4114-a459-65fa199484f7" />
+
+I then recorded a quick demo video showing off the RGB control, typing, arrow keys, and scrolling. I also cleaned up my firmware and pushed it (as well as precompiled versions) to the repo. I rewrote some readmes with updated info. I then opened up Kdenlive to start working on the demo video. For the soundtrack I started with trying places to be by Fred again.. but it was too high energy so I went with aruarian dance. I got all the footage over and overlaid Monkeytype onto the demo video. Some more cutting and editing, and I had a demo video I was proud of! Now for the reddit post. I'm going to be posting to r/ergomechkeeb since in the sub description they say jank is encouraged.
+
+<img width="751" height="915" alt="image" src="https://github.com/user-attachments/assets/1f99aec9-6adc-4174-bdcd-5a04fae79353" />
+
+Now to submit to the form! I polished up my magazine page and uploaded everything required. And that's it! Glyph is done!
+
+**[hours worked this session: 2.5]**
+
+**[total: 38.5]**
+
+
