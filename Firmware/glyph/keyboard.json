@@ -1,0 +1,118 @@
+{
+    "keyboard_name": "glyph",
+    "manufacturer": "hex4",
+    "url": "",
+    "maintainer": "Hex-4",
+    "usb": {
+        "vid": "0xFEED",
+        "pid": "0x2025",
+        "device_version": "1.0.0"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "features": {
+        "bootmagic": true,
+        "mousekey": true,
+        "extrakey": true,
+        "console": true,
+        "command": false,
+        "nkro": true,
+        "backlight": false,
+        "rgblight": true,
+        "audio": false,
+        "encoder": false,
+        "oled": false
+    },
+    "split": {
+        "enabled": true,
+        "transport": {
+            "protocol": "serial"
+        },
+        "serial": {
+            "driver": "vendor"
+        },
+        "matrix_pins": {
+            "right": {
+                "cols": ["GP0", "GP1", "GP2", "GP3", "GP4", "GP5", "GP20"],
+                "rows": ["GP10", "GP11", "GP12"]
+            }
+        }
+    },
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "cols": ["GP0", "GP1", "GP2", "GP3", "GP4", "GP5", "GP20"],
+        "rows": ["GP10", "GP11", "GP12"]
+    },
+    "ws2812": {
+        "pin": "GP16",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 11,
+        "split": true,
+        "split_count": [6, 5],
+        "animations": {
+            "breathing": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "snake": true,
+            "knight": true,
+            "christmas": true,
+            "static_gradient": true,
+            "rgb_test": true,
+            "alternating": true,
+            "twinkle": true
+        },
+        "max_brightness": 150
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "matrix": [0, 0], "x": 0, "y": 0 },
+                { "matrix": [0, 1], "x": 1, "y": 0 },
+                { "matrix": [0, 2], "x": 2, "y": 0 },
+                { "matrix": [0, 3], "x": 3, "y": 0 },
+                { "matrix": [0, 4], "x": 4, "y": 0 },
+                { "matrix": [0, 5], "x": 5, "y": 0 },
+
+                { "matrix": [3, 0], "x": 7, "y": 0 },
+                { "matrix": [3, 1], "x": 8, "y": 0 },
+                { "matrix": [3, 2], "x": 9, "y": 0 },
+                { "matrix": [3, 3], "x": 10, "y": 0 },
+                { "matrix": [3, 4], "x": 11, "y": 0 },
+                { "matrix": [3, 5], "x": 12, "y": 0 },
+
+                { "matrix": [1, 0], "x": 0, "y": 1 },
+                { "matrix": [1, 1], "x": 1, "y": 1 },
+                { "matrix": [1, 2], "x": 2, "y": 1 },
+                { "matrix": [1, 3], "x": 3, "y": 1 },
+                { "matrix": [1, 4], "x": 4, "y": 1 },
+                { "matrix": [1, 5], "x": 5, "y": 1 },
+
+                { "matrix": [4, 0], "x": 7, "y": 1 },
+                { "matrix": [4, 1], "x": 8, "y": 1 },
+                { "matrix": [4, 2], "x": 9, "y": 1 },
+                { "matrix": [4, 3], "x": 10, "y": 1 },
+                { "matrix": [4, 4], "x": 11, "y": 1 },
+                { "matrix": [4, 5], "x": 12, "y": 1 },
+
+                { "matrix": [2, 0], "x": 0, "y": 2 },
+                { "matrix": [2, 1], "x": 1, "y": 2 },
+                { "matrix": [2, 2], "x": 2, "y": 2 },
+                { "matrix": [2, 3], "x": 3, "y": 2 },
+                { "matrix": [2, 4], "x": 4, "y": 2 },
+                { "matrix": [2, 5], "x": 5, "y": 2 },
+
+                { "matrix": [5, 0], "x": 7, "y": 2 },
+                { "matrix": [5, 1], "x": 8, "y": 2 },
+                { "matrix": [5, 2], "x": 9, "y": 2 },
+                { "matrix": [5, 3], "x": 10, "y": 2 },
+                { "matrix": [5, 4], "x": 11, "y": 2 },
+                { "matrix": [5, 5], "x": 12, "y": 2 },
+
+                { "matrix": [0, 6], "x": 2.5, "y": 3 },
+                { "matrix": [3, 6], "x": 9.5, "y": 3 }
+            ]
+        }
+    }
+}

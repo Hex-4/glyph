@@ -1,3 +1,13 @@
 # [ GLYPH :: FIRMWARE ]
 
-This folder stores [glyph]'s [KMK](https://github.com/KMKfw/kmk_firmware) firmware! To use it, first flash both Picos with CircuitPython. Then, [rename](https://learn.adafruit.com/welcome-to-circuitpython/renaming-circuitpy) each drive to `GLYPH_L` and `GLYPH_R`. To finish up, just copy over the contents of each folder here to their respective drives.
+This folder stores [glyph]'s QMK firmware. Once you've [installed QMK](https://docs.qmk.fm/newbs_getting_started), simply drop this `glyph` folder into your `qmk-firmware/keyboards`. Then flash:
+
+```
+hold down the BOOT button on the left pico while plugging in. mount the drive, then:
+
+qmk flash -kb glyph -km default -bl uf2-split-left
+
+do the same for the right side. make sure to unplug the other side first!
+
+qmk flash -kb glyph -km default -bl uf2-split-right
+```
